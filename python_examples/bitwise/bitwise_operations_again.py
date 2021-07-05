@@ -14,10 +14,10 @@ print(" bitwise 1|0 ", (1|0))
 print(" bitwise 1|1 ", (1|1))
 print(" bitwise 0|0 ", (0|0))
 
-
-
 print(" for odd numbers -> ", 5&1)
 print(" for even numbers -> ", 4&1)
+
+
 
 
 

@@ -1,4 +1,4 @@
-a = 1
+a = 5
 
 bitwise_1sComplement = ~a
 bitwise_2sComplement = ~a+1

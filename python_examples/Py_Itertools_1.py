@@ -2,6 +2,7 @@
 # https://www.geeksforgeeks.org/python-itertools-accumulate/
 # https://docs.python.org/3/library/bisect.html
 # https://www.tutorialspoint.com/bisect-array-bisection-algorithm-in-python
+# https://medium.com/@jasonrigden/a-guide-to-python-itertools-82e5a306cdf8
 
 import itertools
 import operator
@@ -37,8 +38,33 @@ selector = [1,0,1,0]
 print(" selector -> ", selector)
 print(" compress array ", list(itertools.compress(l,selector)))
 
-chain2str = itertools.chain('ABC', 'DEF')
-print("chain2str, -> ", list(chain2str))
-for it in chain2str:
-    for elem in it:
-        print(" elem -> ", elem, " it -> ", it)
+chain = itertools.chain('ABC', 'DEF', ['pqr'])
+print("chain list of iterables , -> ", list(chain))
+
+chain_from_iterable = itertools.chain.from_iterable(['ABC', 'DEF', 'PQR'])
+print(" chain_from_iterable -> ", list(chain_from_iterable))
+
+cnt = itertools.count(10,3) # start, step
+print(" cnt - is an Iterator -> ", type(cnt))
+for i in cnt:
+    print(" i -> ", i)
+    if i > 15:
+        break
+
+cycle = itertools.cycle('ABC')
+idx = 0
+for c in cycle:
+    print(" c -> ", c)
+    idx+=1
+    if idx == 5:
+        break
+
+
+print(" cartesian product using itertools.product  - similar to 2 for loops ")
+product = itertools.product([1,2,3], ['a','b','c'])
+for p in product:
+    print(" p -> ", p)
+
+it = itertools.repeat(10,3)
+for r in it:
+    print(" repeat -> ", r)

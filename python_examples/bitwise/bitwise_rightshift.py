@@ -9,8 +9,8 @@
 n = 2
 
 for n in range(1, 10):
-    print(" n is -> ", n ," bin n -> ", bin(n), " bin n-1 -> ", bin(n-1))
-    print(" n&n-1 = 0 if n is power of 2 -> ", (n&(n-1)))
+    # print(" n is -> ", n ," bin n -> ", bin(n), " bin n-1 -> ", bin(n-1))
+    print(" n&n-1 = 0 if n is power of 2 -> ", (n&(n-1)), " n -> ", n)
 
 
 n = 2
